@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* .calculator {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+  margin: auto;
+  padding: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+
+.display {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 50px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 10px;
+}
+
+.display span {
+  font-size: 20px;
+}
+
+.button-row {
+  display: flex;
+}
+
+.button {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  font-size: 16px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.button.operator {
+  background-color: #e1e1e1;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:active {
+  background-color: #ccc;
+}
+
+#equals {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#equals:hover {
+  background-color: #2E8B57;
+} */
+
+
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e3edf7;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.container{
+    position: relative;
+    height: 300px;
+    width: 300px;
+}
+
+.outer{
+    height: 300px;
+    width: 300px;    
+    padding: 38px;
+    border-radius: 50%;
+     box-shadow: 8px 8px 20px -1px rgba(0,0,0,0.10),
+    -8px -8px 20px -1px rgba(255,255,255,0.8);    
+}
+
+.inner{
+    height: 220px;
+    width: 220px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    box-shadow: 
+    inset 8px 8px 20px -1px rgba(0,0,0,0.3),
+    inset -8px -8px 20px -1px rgba(255,255,255,0.9);     
+}
+
+#number{
+    font-size: 50px;
+    font-weight: 900;
+    color:#130f40;
+}
+
+circle{
+    fill: none;
+    stroke:url(#GradientColor);
+    stroke-width: 40px;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: animate 9s linear forwards;
+}
+
+@keyframes animate{
+    100%{
+        stroke-dashoffset: 180;
+    }
+}
+
+svg{
+    position: absolute;
+    top:0;
+    left:0;
+}
+input{
+    border: none;
+    width: 270px;
+    height: 35px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+button {
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #c5c5c5,
+     -6px -6px 12px #ffffff;
+   }
+   
+   button:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5,
+    inset -4px -4px 12px #ffffff;
+   } */
+</style>
+</head>
+
+<body>
+    <!-- // 1)  Rows and Columns - accept no. of rows and columns from user and build a table -->
+    <!-- <input id="rows" type="text" placeholder="Number of Rows"><br><br>
+    <input id="cols" type="text" placeholder="Number of Cols"><br><br>
+    <button id="btn">Click</button>
+    <div id="output"></div>  -->
+
+
+    <!-- // 14) Form Validations -->
+
+
+    <!-- <form>
+        <div>
+            <label>First name</label><br>
+            <input id="fname" type="text"><br>
+            <label id="ferror" style="display: none;">* plese enter First Name</label>
+        </div>
+        <br><br>
+        <div>
+            <label>Last name</label><br>
+            <input id="lname" type="text"><br>
+            <label id="lerror" style="display: none;">* plese enter last Name</label>
+        </div>
+        <br><br>
+        <div>
+            <label>Email</label><br>
+            <input id="email" type="text"><br>
+            <label id="Emailerror" style="display: none;">* plese enter E-mail</label>
+        </div>
+        <br>
+        <br>
+        <div>
+            <button id="btn">SUBMIT</button>
+        </div>
+    </form> -->
+
+
+
+    <!-- // 15) JavaScript calculator -->
+
+    <!-- <div class="calculator">
+        <div class="display">
+          <span id="result">0</span>
+        </div>
+        <div class="button-row">
+          <button class="button operator" id="ad">+</button>
+          <button class="button operator" id="subtract">-</button>
+          <button class="button operator" id="multiply">*</button>
+          <button class="button operator" id="divide">/</button>
+        </div>
+        <div class="button-row">
+          <button class="button" id="seven">7</button>
+          <button class="button" id="eight">8</button>
+          <button class="button" id="nine">9</button>
+        </div>
+        <div class="button-row">
+          <button class="button" id="four">4</button>
+          <button class="button" id="five">5</button>
+          <button class="button" id="six">6</button>
+        </div>
+        <div class="button-row">
+          <button class="button" id="one">1</button>
+          <button class="button" id="two">2</button>
+          <button class="button" id="three">3</button>
+        </div>
+        <div class="button-row">
+          <button class="button" id="zero">0</button>
+          <button class="button" id="decimal">.</button>
+          <button class="button" id="clear">C</button>
+        </div>
+        <button class="button" id="equals">=</button>
+      </div> -->
+
+
+
+      <!-- // 17) Progress Bar -->
+
+
+      <!-- <div class="container">
+        <div class="outer">
+            <div class="inner">
+                <div id="number">0%</div>
+            </div>
+        </div>
+       <div>
+       </div>
+        <svg width="320px" height="320px">
+            <defs>
+                <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#FFC312"></stop>
+                    <stop offset="50%" stop-color="#F79F1F"></stop>
+                    <stop offset="100%" stop-color="#EE5A24"></stop>
+                </linearGradient>
+            </defs>
+            <circle id="circle" cx="150" cy="150" r="130" stroke-linecap="round"/>
+        </svg>
+
+    </div>   
+    <input type="text" id="input" placeholder="Enter Your Value">
+    <button id="btn"> Click me </button> -->
+    <div id="div1"></div>
+    <script src="index.js"></script>
+</body>
+</html>
